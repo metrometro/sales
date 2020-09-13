@@ -1,6 +1,3 @@
-/**
- * Created by metro on 13.09.2020.
- */
 
 global class CustomIterable implements Iterator<Contact>{
 

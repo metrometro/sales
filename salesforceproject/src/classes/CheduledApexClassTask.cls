@@ -12,12 +12,12 @@ global class CheduledApexClassTask implements Schedulable {
             '        Account.BillingPostalCode,\n' +
             '        Account.BillingState,\n' +
             '        Account.BillingStreet FROM Contact WHERE Is_Synced__c = FALSE';
-    private String startTime = '0 30 0 * * ?';
+//    private String startTime = '0 30 0 * * ?';
 
     global void execute(SchedulableContext sc) {
         BatchApexClassTask b = new BatchApexClassTask(query);
-//        BatchApexClassIterableTask b2 = new BatchApexClassIterableTask();
+        BatchApexClassIterableTask b2 = new BatchApexClassIterableTask();
         database.executebatch(b, 100);
-//        database.executebatch(b2, 100);
+        database.executebatch(b2, 100);
     }
 }

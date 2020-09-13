@@ -4,9 +4,9 @@
 
 public with sharing class BatchApexClassIterableTask implements Database.batchable<sObject> {
 
-    public Iterable<Contact> start(Database.BatchableContext BC) {
-        System.debug('START, count = ' + count);
-        return (Iterable<Contact>) new CustomIterable();
+    public Iterable<SObject> start(Database.BatchableContext BC) {
+        System.debug('START');
+        return (Iterable<SObject>) new CustomIterable();
     }
 
     public void execute(Database.BatchableContext bc, List<Contact> contactList) {
