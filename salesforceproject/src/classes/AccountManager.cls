@@ -1,6 +1,4 @@
-/**
- * Created by metro on 16.09.2020.
- */
+
 @RestResource(urlMapping='/Accounts/*')
 global with sharing class AccountManager {
 
